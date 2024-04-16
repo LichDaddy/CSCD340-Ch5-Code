@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
         char *myargs[3];
         // open the file to write to and to see the output of the hexdump command if it will open the file twice
         myargs[0] = strdup("hexdump"); // this is like piping in the command "wc" into the terminal
-        myargs[1] = strdup("loren.txt"); // the file we want to count
+        myargs[1] = strdup("main.c"); // the file we want to count
         myargs[2] = NULL; // placeholder for the end of the array
         execvp(myargs[0], myargs); // this is like running the command "hexdump loren.txt" in the terminal
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
         char *myargs[3];
         // we are diffrerentiating the two commands by using the -l flag in the wc command
         myargs[0] = strdup("wc"); // this is like piping in the command "wc -l" into the terminal
-        myargs[1] = strdup("loren.txt"); // the file we want to count
+        myargs[1] = strdup("main.c"); // the file we want to count
         myargs[2] = NULL; // placeholder for the end of the array
         execvp(myargs[0], myargs); // this is like running the command "wc loren.txt" in the terminal  
 
