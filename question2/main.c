@@ -6,6 +6,10 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+    //////////////////////////////////////
+    // THIS IS OBVIOUSLY FOR QUESTION 2 //
+    //////////////////////////////////////
+
 int main(int argc, char *argv[]) {
 
     int rc = fork();
@@ -28,7 +32,7 @@ int main(int argc, char *argv[]) {
         myargs[0] = strdup("hexdump"); // this is like piping in the command "wc" into the terminal
         myargs[1] = strdup("loren.txt"); // the file we want to count
         myargs[2] = NULL; // placeholder for the end of the array
-        execvp(myargs[0], myargs); // this is like running the command "wc p4.c" in the terminal
+        execvp(myargs[0], myargs); // this is like running the command "hexdump loren.txt" in the terminal
 
     } // end of else if statement
 
@@ -45,7 +49,7 @@ int main(int argc, char *argv[]) {
         myargs[0] = strdup("wc"); // this is like piping in the command "wc -l" into the terminal
         myargs[1] = strdup("loren.txt"); // the file we want to count
         myargs[2] = NULL; // placeholder for the end of the array
-        execvp(myargs[0], myargs); // this is like running the command "wc p4.c" in the terminal  
+        execvp(myargs[0], myargs); // this is like running the command "wc loren.txt" in the terminal  
 
         // simple print statement to check if we are in the parent process
         fprintf(stderr, "in the parent\n");        
