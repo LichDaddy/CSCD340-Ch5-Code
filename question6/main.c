@@ -13,12 +13,13 @@ int main(int argc, char *argv[]) {
     } // end of if statement
 
     else if (rc == 0) {
-        int wc = wait(NULL);
-        printf("child (wc:%d) (pid:%d)\n", wc, (int) getpid());
+        printf("child (pid:%d)\n", (int) getpid());
     } // end of else if statement
 
     else {
-        printf("parent of %d (pid:%d)\n", rc, (int) getpid());
+        int wc; 
+        waitpid(rc, wc, 0);
+        printf("parent of %d (status of child process:%d) (wc:%d)\n", rc, wc, (int) getpid());
     } // end of else statement 
 
     return 0;
