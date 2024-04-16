@@ -47,6 +47,7 @@ int main(int argc, char *argv[]) {
         myargs[2] = NULL; // placeholder for the end of the array
         execvp(myargs[0], myargs); // this is like running the command "wc p4.c" in the terminal  
 
+        // simple print statement to check if we are in the parent process
         fprintf(stderr, "in the parent\n");        
 
     } // end of else statement

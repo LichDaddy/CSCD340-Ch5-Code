@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     } // end of if statement
 
+    // just testing what happens when we wait for the child process
     else if (rc == 0) {
         int wc = wait(NULL);
         printf("child (wc:%d) (pid:%d)\n", wc, (int) getpid());
