@@ -15,7 +15,7 @@ int main(int argc, char *argv []) {
     int arraySize = size * 1024 * 1024;
 
     // allocate that size
-    int *array = (int *) malloc(arraySize);
+    int *array = (int *) malloc(arraySize * sizeof(int));
 
     // will run because always true
     while (0 == 0){
